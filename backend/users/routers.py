@@ -18,7 +18,7 @@ ALGORITHM=os.getenv("ALGORITHM")
 
 users_router = APIRouter()
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/users/token")
 
 @users_router.post("/signup", tags=["Authentication"])
 async def signup(user: CreateUser):
